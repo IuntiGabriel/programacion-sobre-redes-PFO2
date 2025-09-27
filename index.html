@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SISTEMA DE GESTION DE TAREAS</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 900px;
+      margin: auto;
+      background: #f7f7f7;
+      padding: 20px;
+    }
+    h1, h2 {
+      text-align: center;
+      color: #333;
+    }
+    img {
+      display: block;
+      margin: 10px auto;
+      max-width: 80%;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+    .section {
+      margin: 30px 0;
+      padding: 15px;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+  <h1>Sistema de Gestión de Tareas con API y Base de Datos</h1>
+  <p>Proyecto desarrollado como práctica formativa para implementar una API REST con Flask, SQLite y bcrypt.</p>
+
+  <div class="section">
+    <h2>Capturas de Pruebas</h2>
+    <h3>Registro de Usuario</h3>
+    <img src="screenshots/usuario.png" alt="Registro de usuario">
+    <h3>Inicio de Sesión</h3>
+    <img src="screenshots/creacion_usuario_login.png" alt="Login exitoso">
+    <h3>Contraseña Hasheada en SQLite</h3>
+    <img src="screenshots/pass_bcrypt.png" alt="Contraseña hasheada en DB">
+  </div>
+
+  <div class="section">
+    <h2>PREGUNTAS CONCEPTUALES</h2>
+    <h3>Por qué hashear contraseñas?</h3>
+    <p>Para proteger la información sensible de los usuarios en caso de que la base de datos sea comprometida. 
+       Un hash es irreversible, lo que significa que no se puede obtener la contraseña original. 
+       Bcrypt además utiliza salt y es resistente a ataques de fuerza bruta y rainbow tables.</p>
+
+    <h3>Ventajas de usar SQLite</h3>
+    <ul>
+      <li>Base de datos ligera y portátil.</li>
+      <li>No necesita instalación de un servidor adicional.</li>
+      <li>Ideal para proyectos pequeños y prototipos.</li>
+      <li>Fácil de compartir, solo requiere el archivo <code>.db</code>.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>README</h2>
+    <p>Podés consultar el README completo en el repositorio de GitHub: 
+      <a href="https://github.com/IuntiGabriel/programacion-sobre-redes-PFO2.git" target="_blank">Ver en GitHub</a>
+    </p>
+  </div>
+</body>
+</html>
