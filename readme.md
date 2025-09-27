@@ -77,3 +77,6 @@ Método	Endpoint	Descripción	                        Requiere Autenticación
 POST	/registro	Registra un nuevo usuario.	        No
 POST	/login	    Inicia sesión y obtiene un token.	No
 GET	    /tareas	    Muestra las tareas del usuario.	    Sí
+
+## GITHUB PAGES CON TESTS Y RESPUESTAS 
+https://iuntigabriel.github.io/programacion-sobre-redes-PFO2/
