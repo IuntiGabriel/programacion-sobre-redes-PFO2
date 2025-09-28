@@ -30,35 +30,50 @@ Al finalizar este trabajo práctico se busca que el estudiante sea capaz de:
 ```bash
 git clone https://github.com/IuntiGabriel/programacion-sobre-redes-PFO2.git
 cd cd programacion-sobre-redes-PFO2/
+```
 
 ### Crear un entorno virtual - altamente recomendable trabajar en un entorno virtual para evitar conflictos de dependencias.
 ```bash
 python -m venv venv
+```
 
 #### Activa el entorno virtual
 # Windows Powershell
 ```bash
 venv\Scripts\Activate
+```
 
 # Linux - MAC
 ```bash
 source venv/bin/activate
+```
 
 #### Instalar dependendias
 ```bash
 pip install -r requirements.txt
+```
 
 # Si el archivo requirements.txt no existe podes instalar las dependencias manualmente
 ```bash
 pip install flask bcrypt requests
+```
 
 ## Ejecutar el servidor 
 ```bash
 python servidor.py
+```
 
 ### Por defecto Flask corre en:
 http://127.0.0.1:5000
 
 
+## Endpoint disponibles
+### REGISTRO DE USUARIOS POST /registro
+### INICIO DE SESION POST /login
+### PAGINA DE BIENVENIDA GET /tareas
+http://127.0.0.1:5000/tareas 
 
-
+Método	Endpoint	Descripción	                        Requiere Autenticación
+POST	/registro	Registra un nuevo usuario.	        No
+POST	/login	    Inicia sesión y obtiene un token.	No
+GET	    /tareas	    Muestra las tareas del usuario.	    Sí
