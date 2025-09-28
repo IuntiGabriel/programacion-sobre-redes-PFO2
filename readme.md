@@ -38,12 +38,12 @@ python -m venv venv
 ```
 
 #### Activa el entorno virtual
-# Windows Powershell
+##### Windows Powershell
 ```bash
 venv\Scripts\Activate
 ```
 
-# Linux - MAC
+##### Linux - MAC
 ```bash
 source venv/bin/activate
 ```
@@ -53,7 +53,7 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-# Si el archivo requirements.txt no existe podes instalar las dependencias manualmente
+##### Si el archivo requirements.txt no existe podes instalar las dependencias manualmente
 ```bash
 pip install flask bcrypt requests
 ```
