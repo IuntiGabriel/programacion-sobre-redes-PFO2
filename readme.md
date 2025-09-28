@@ -37,7 +37,7 @@ cd cd programacion-sobre-redes-PFO2/
 python -m venv venv
 ```
 
-#### Activa el entorno virtual
+### Activa el entorno virtual
 ##### Windows Powershell
 ```bash
 venv\Scripts\Activate
@@ -48,7 +48,7 @@ venv\Scripts\Activate
 source venv/bin/activate
 ```
 
-#### Instalar dependendias
+### Instalar dependendias
 ```bash
 pip install -r requirements.txt
 ```
