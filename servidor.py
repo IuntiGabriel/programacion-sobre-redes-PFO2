@@ -38,7 +38,7 @@ def init_db():
                 password BLOB NOT NULL
             );
         """)
-        # tabla de tareas opcional
+        # tabla de tareas opcional PARA FUTURAS IMPLEMENTACIONES
         cursor.execute("""
             CREATE TABLE tareas (
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -67,7 +67,7 @@ def verify_credentials(usuario, password_plain):
     user_id, hashed = row[0], row[1]
     # hashed es bytes (BLOB)
     if isinstance(hashed, str):
-        # Por si se guardó como TEXT: convertir a bytes
+        # Por si se guardó como TEXT: convertir a bytes SEGURIDAD A VECES PASA
         hashed = hashed.encode("utf-8")
     ok = bcrypt.checkpw(password_plain.encode("utf-8"), hashed)
     return ok, user_id if ok else (False, None)
@@ -90,7 +90,7 @@ def requires_basic_auth(f):
         if not ok:
             return Response('Invalid credentials', 401,
                             {'WWW-Authenticate': 'Basic realm="Login required"'})
-        # inyectar user info en kwargs
+        # inyectar user info en kwargs EVITA REPETICION
         return f(usuario=usuario, user_id=user_id, *args, **kwargs)
     return decorated
 
