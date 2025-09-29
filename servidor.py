@@ -38,8 +38,7 @@ def init_db():
                 password BLOB NOT NULL
             );
         """)
-        # tabla de tareas opcional/simple (no requerida estrictamente por la consigna,
-        # pero la dejo por si querés extender luego)
+        # tabla de tareas opcional
         cursor.execute("""
             CREATE TABLE tareas (
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -91,7 +90,7 @@ def requires_basic_auth(f):
         if not ok:
             return Response('Invalid credentials', 401,
                             {'WWW-Authenticate': 'Basic realm="Login required"'})
-        # inyectar user info en kwargs si se quiere
+        # inyectar user info en kwargs
         return f(usuario=usuario, user_id=user_id, *args, **kwargs)
     return decorated
 
